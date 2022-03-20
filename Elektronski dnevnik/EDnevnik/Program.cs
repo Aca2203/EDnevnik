@@ -19,7 +19,7 @@ namespace EDnevnik
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Upisnica());
+            Application.Run(new Login());
         }
     }
 }
