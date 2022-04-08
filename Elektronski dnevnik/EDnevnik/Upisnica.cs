@@ -84,7 +84,7 @@ namespace EDnevnik
             SqlConnection veza = Konekcija.Povezi();
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT Upisnica.id AS 'id', ime + ' ' + prezime AS 'naziv', osoba.id AS ucenik FROM Upisnica JOIN Osoba ON Osoba.id = Upisnica.osoba_id WHERE odeljenje_id = " + cmb_odeljenje.SelectedValue.ToString(), veza);
             dt_upisnica = new DataTable();
-            adapter.Fill(dt_upisnica);
+            adapter.Fill(dt_upisnica);            
 
             grid_upisnica.DataSource = dt_upisnica;
             grid_upisnica.AllowUserToAddRows = false;
@@ -92,8 +92,7 @@ namespace EDnevnik
         }
 
         private void Upisnica_Load(object sender, EventArgs e)
-        {
-            // Ednevnik 11 Upisnica 3 -> 9:40
+        {            
             cmb_godina_popuni();
             cmb_odeljenje_popuni();
             cmb_odeljenje.SelectedIndex = -1;
@@ -102,11 +101,14 @@ namespace EDnevnik
 
         private void grid_upisnica_CurrentCellChanged(object sender, EventArgs e)
         {
-            int broj_sloga = grid_upisnica.CurrentRow.Index;
-            if (dt_upisnica.Rows.Count != 0 && broj_sloga >= 0)
+            if (grid_upisnica.Focused)
             {
-                cmb_ucenik.SelectedValue = grid_upisnica.Rows[broj_sloga].Cells["ucenik"].Value.ToString();
-            }
+                int broj_sloga = grid_upisnica.CurrentRow.Index;
+                if (dt_upisnica.Rows.Count != 0 && broj_sloga >= 0)
+                {
+                    cmb_ucenik.SelectedValue = grid_upisnica.Rows[broj_sloga].Cells["ucenik"].Value.ToString();
+                }
+            }            
         }
     }
 }
