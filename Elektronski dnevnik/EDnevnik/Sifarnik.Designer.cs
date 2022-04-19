@@ -41,13 +41,13 @@ namespace EDnevnik
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1263, 301);
+            this.dataGridView1.Size = new System.Drawing.Size(875, 301);
             this.dataGridView1.TabIndex = 0;
             // 
             // btn_ok
             // 
             this.btn_ok.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ok.Location = new System.Drawing.Point(544, 349);
+            this.btn_ok.Location = new System.Drawing.Point(353, 347);
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(219, 64);
             this.btn_ok.TabIndex = 23;
@@ -59,7 +59,7 @@ namespace EDnevnik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1287, 450);
+            this.ClientSize = new System.Drawing.Size(900, 450);
             this.Controls.Add(this.btn_ok);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Sifarnik";

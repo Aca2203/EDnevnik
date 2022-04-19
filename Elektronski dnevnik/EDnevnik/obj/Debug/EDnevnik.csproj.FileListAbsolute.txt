@@ -13,3 +13,4 @@ C:\Users\Sale\Desktop\Аца\Учење на даљину\Четврта год�
 C:\Users\Sale\Desktop\Аца\Учење на даљину\Четврта година\Базе података\Elektronski dnevnik\EDnevnik\obj\Debug\EDnevnik.Sifarnik.resources
 C:\Users\Sale\Desktop\Аца\Учење на даљину\Четврта година\Базе података\Elektronski dnevnik\EDnevnik\obj\Debug\EDnevnik.Raspodela.resources
 C:\Users\Sale\Desktop\Аца\Учење на даљину\Четврта година\Базе података\Elektronski dnevnik\EDnevnik\obj\Debug\EDnevnik.Upisnica.resources
+C:\Users\Sale\Desktop\Аца\Учење на даљину\Четврта година\Базе података\Elektronski dnevnik\EDnevnik\obj\Debug\EDnevnik.Glavna2.resources

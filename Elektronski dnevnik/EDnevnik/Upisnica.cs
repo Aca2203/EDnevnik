@@ -108,7 +108,7 @@ namespace EDnevnik
                 {
                     cmb_ucenik.SelectedValue = grid_upisnica.Rows[broj_sloga].Cells["ucenik"].Value.ToString();
                 }
-            }            
+            }
         }
     }
 }
