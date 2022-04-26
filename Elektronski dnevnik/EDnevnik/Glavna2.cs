@@ -22,7 +22,7 @@ namespace EDnevnik
             txt_ime.Text = Program.ime_korisnika;
             txt_prezime.Text = Program.prezime_korisnika;
             txt_uloga.Text = Program.uloga_korisnika;
-        }
+        }        
 
         private void расподелаToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -63,6 +63,11 @@ namespace EDnevnik
         {
             Sifarnik frm_predmeti = new Sifarnik("Predmet");
             frm_predmeti.Show();
+        }
+
+        private void Glavna2_FormClosed_1(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

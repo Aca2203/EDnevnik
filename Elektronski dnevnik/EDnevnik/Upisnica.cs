@@ -38,7 +38,12 @@ namespace EDnevnik
             if (cmb_godina.IsHandleCreated && cmb_godina.Focused)
             {
                 cmb_odeljenje_popuni();
-                cmb_odeljenje.SelectedIndex = -1;
+                cmb_odeljenje.SelectedIndex = -1;                                
+                while (grid_upisnica.Rows.Count > 0)
+                {
+                    grid_upisnica.Rows.Remove(grid_upisnica.Rows[0]);
+                }
+                txt_id.Text = "";
                 cmb_ucenik.SelectedIndex = -1;
                 cmb_ucenik.Enabled = false;
             }            
@@ -103,11 +108,85 @@ namespace EDnevnik
         {
             if (grid_upisnica.Focused)
             {
-                int broj_sloga = grid_upisnica.CurrentRow.Index;
-                if (dt_upisnica.Rows.Count != 0 && broj_sloga >= 0)
+                if (grid_upisnica.CurrentRow != null)
                 {
-                    cmb_ucenik.SelectedValue = grid_upisnica.Rows[broj_sloga].Cells["ucenik"].Value.ToString();
-                }
+                    int broj_sloga = grid_upisnica.CurrentRow.Index;
+                    if (dt_upisnica.Rows.Count != 0 && broj_sloga >= 0)
+                    {
+                        cmb_ucenik.SelectedValue = grid_upisnica.Rows[broj_sloga].Cells["ucenik"].Value.ToString();
+                        txt_id.Text = grid_upisnica.Rows[broj_sloga].Cells["id"].Value.ToString();
+                    }
+                }                
+            }
+        }
+
+        private void btn_dodaj_Click(object sender, EventArgs e)
+        {
+            StringBuilder naredba = new StringBuilder("INSERT INTO upisnica (odeljenje_id, osoba_id) VALUES (' ");
+            naredba.Append(cmb_odeljenje.SelectedValue.ToString() + "', '");
+            naredba.Append(cmb_ucenik.SelectedValue.ToString() + "')");
+
+            SqlConnection veza = Konekcija.Povezi();
+            SqlCommand komanda = new SqlCommand(naredba.ToString(), veza);
+
+            try
+            {
+                veza.Open();
+                komanda.ExecuteNonQuery();
+                veza.Close();
+
+                grid_popuni();
+            }
+            catch (Exception greska)
+            {
+                MessageBox.Show(greska.Message);
+                throw;
+            }
+        }
+
+        private void btn_izmeni_Click(object sender, EventArgs e)
+        {
+            StringBuilder naredba = new StringBuilder("UPDATE upisnica SET ");
+            naredba.Append("osoba_id = '" + cmb_ucenik.SelectedValue.ToString() + "' ");
+            naredba.Append("WHERE id = " + txt_id.Text);
+
+            SqlConnection veza = Konekcija.Povezi();
+            SqlCommand komanda = new SqlCommand(naredba.ToString(), veza);
+            
+            try
+            {
+                veza.Open();
+                komanda.ExecuteNonQuery();
+                veza.Close();
+
+                grid_popuni();
+            }
+            catch (Exception greska)
+            {
+                MessageBox.Show(greska.Message);
+                throw;
+            }
+        }
+
+        private void btn_obrisi_Click(object sender, EventArgs e)
+        {
+            string naredba = "DELETE FROM upisnica WHERE id = " + txt_id.Text;
+
+            SqlConnection veza = Konekcija.Povezi();
+            SqlCommand komanda = new SqlCommand(naredba, veza);
+
+            try
+            {
+                veza.Open();
+                komanda.ExecuteNonQuery();
+                veza.Close();
+
+                grid_popuni();
+            }
+            catch (Exception greska)
+            {
+                MessageBox.Show(greska.Message);
+                throw;
             }
         }
     }

@@ -142,6 +142,7 @@ namespace EDnevnik
             this.btn_obrisi.TabIndex = 33;
             this.btn_obrisi.Text = "Бриши";
             this.btn_obrisi.UseVisualStyleBackColor = true;
+            this.btn_obrisi.Click += new System.EventHandler(this.btn_obrisi_Click);
             // 
             // btn_izmeni
             // 
@@ -152,6 +153,7 @@ namespace EDnevnik
             this.btn_izmeni.TabIndex = 32;
             this.btn_izmeni.Text = "Измени";
             this.btn_izmeni.UseVisualStyleBackColor = true;
+            this.btn_izmeni.Click += new System.EventHandler(this.btn_izmeni_Click);
             // 
             // btn_dodaj
             // 
@@ -162,6 +164,7 @@ namespace EDnevnik
             this.btn_dodaj.TabIndex = 31;
             this.btn_dodaj.Text = "Додај";
             this.btn_dodaj.UseVisualStyleBackColor = true;
+            this.btn_dodaj.Click += new System.EventHandler(this.btn_dodaj_Click);
             // 
             // Upisnica
             // 

@@ -75,21 +75,21 @@ namespace EDnevnik
             // расподелаToolStripMenuItem
             // 
             this.расподелаToolStripMenuItem.Name = "расподелаToolStripMenuItem";
-            this.расподелаToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.расподелаToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.расподелаToolStripMenuItem.Text = "Расподела";
             this.расподелаToolStripMenuItem.Click += new System.EventHandler(this.расподелаToolStripMenuItem_Click);
             // 
             // оценеToolStripMenuItem
             // 
             this.оценеToolStripMenuItem.Name = "оценеToolStripMenuItem";
-            this.оценеToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.оценеToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.оценеToolStripMenuItem.Text = "Оцене";
             this.оценеToolStripMenuItem.Click += new System.EventHandler(this.оценеToolStripMenuItem_Click);
             // 
             // уписницеToolStripMenuItem
             // 
             this.уписницеToolStripMenuItem.Name = "уписницеToolStripMenuItem";
-            this.уписницеToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.уписницеToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.уписницеToolStripMenuItem.Text = "Уписнице";
             this.уписницеToolStripMenuItem.Click += new System.EventHandler(this.уписницеToolStripMenuItem_Click);
             // 
@@ -107,28 +107,28 @@ namespace EDnevnik
             // особеToolStripMenuItem
             // 
             this.особеToolStripMenuItem.Name = "особеToolStripMenuItem";
-            this.особеToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.особеToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.особеToolStripMenuItem.Text = "Особе";
             this.особеToolStripMenuItem.Click += new System.EventHandler(this.особеToolStripMenuItem_Click);
             // 
             // смеровиToolStripMenuItem
             // 
             this.смеровиToolStripMenuItem.Name = "смеровиToolStripMenuItem";
-            this.смеровиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.смеровиToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.смеровиToolStripMenuItem.Text = "Смерови";
             this.смеровиToolStripMenuItem.Click += new System.EventHandler(this.смеровиToolStripMenuItem_Click);
             // 
             // школскеГодинеToolStripMenuItem
             // 
             this.школскеГодинеToolStripMenuItem.Name = "школскеГодинеToolStripMenuItem";
-            this.школскеГодинеToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.школскеГодинеToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.школскеГодинеToolStripMenuItem.Text = "Школске године";
             this.школскеГодинеToolStripMenuItem.Click += new System.EventHandler(this.школскеГодинеToolStripMenuItem_Click);
             // 
             // предметиToolStripMenuItem
             // 
             this.предметиToolStripMenuItem.Name = "предметиToolStripMenuItem";
-            this.предметиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.предметиToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.предметиToolStripMenuItem.Text = "Предмети";
             this.предметиToolStripMenuItem.Click += new System.EventHandler(this.предметиToolStripMenuItem_Click);
             // 
@@ -210,6 +210,7 @@ namespace EDnevnik
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Glavna2";
             this.Text = "Glavna2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Glavna2_FormClosed_1);
             this.Load += new System.EventHandler(this.Glavna2_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
