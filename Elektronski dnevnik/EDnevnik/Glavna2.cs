@@ -32,7 +32,8 @@ namespace EDnevnik
 
         private void оценеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Ocena frm_ocena = new Ocena();
+            frm_ocena.Show();
         }
 
         private void уписницеToolStripMenuItem_Click(object sender, EventArgs e)

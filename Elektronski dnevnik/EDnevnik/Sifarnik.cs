@@ -44,7 +44,7 @@ namespace EDnevnik
                 catch (Exception greska)
                 {
                     MessageBox.Show(greska.Message);
-                }                
+                }
             }
             this.Close();
         }
